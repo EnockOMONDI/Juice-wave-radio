@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+<head>
+<title>Juice Radio Kenya</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width height=device-height initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900%7CRoboto+Condensed:300,400,500,600,700">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+<link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css">
+<!-- <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style> -->
+<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+</head>
+<body>
+
+<style>
+
+html {
+min-height: 100%; 
+}	
+/* Show the controls (hidden at the start by default) */
+.video-js .vjs-control-bar { 
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+}
+
+/* Make the demo a little prettier */
+body {
+margin-top: 20px;
+background: no-repeat;
+text-align: center; 
+color: #aaa;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+background: #dfdfdf!important;
+}
+
+a, a:hover, a:visited { color: #76DAFF; }
+.video-js {
+/* The base font size controls the size of everything, not just text.
+All dimensions use em-based sizes so that the scale along with the font size.
+Try increasing it to 15px and see what happens. */
+font-size: 8px;
+/* The main font color changes the ICON COLORS as well as the text */
+color: #fff;
+
+}
+
+/* The "Big Play Button" is the play button that shows before the video plays.
+To center it set the align values to center and middle. The typical location
+of the button is the center, but there is trend towards moving it to a corner
+where it gets out of the way of valuable content in the poster image.*/
+.video-js .vjs-big-play-button {
+/* The font size is what makes the big play button...big. 
+All width/height values use ems, which are a multiple of the font size.
+If the .video-js font-size is 10px, then 3em equals 30px.*/
+font-size: 3em;
+/* We're using SCSS vars here because the values are used in multiple places.
+Now that font size is set, the following em values will be a multiple of the
+new font size. If the font-size is 3em (30px), then setting any of
+the following values to 3em would equal 30px. 3 * font-size. */
+/* 1.5em = 45px default */
+line-height: 1.5em;
+height: 1.5em;
+width: 1.5em;
+/* 0.06666em = 2px default */
+border: 0.06666em solid #fff;
+/* 0.3em = 9px default */
+border-radius: 1.7241379310344827em;
+/* Align center */
+left: 50%;
+top: 50%;
+margin-left: -0.75em;
+margin-top: -0.75em; }
+
+/* The default color of control backgrounds is mostly black but with a little
+bit of blue so it can still be seen on all-black video frames, which are common. */
+.video-js .vjs-control-bar,
+.video-js .vjs-big-play-button,
+.video-js .vjs-menu-button .vjs-menu-content {
+/* IE8 - has no alpha support */
+background-color: #8F1199;
+/* Opacity: 1.0 = 100%, 0.0 = 0% */
+background: linear-gradient(330deg, rgb(235, 130, 1)  0%, rgba(77,0,66,1) 60%); }
+
+/* Slider - used for Volume bar and Progress bar */
+.video-js .vjs-slider {
+background-color: #f4c0f8;
+background-color: rgba(244, 192, 248, 0.5); }
+
+/* The slider bar color is used for the progress bar and the volume bar
+(the first two can be removed after a fix that's coming) */
+.video-js .vjs-volume-level,
+.video-js .vjs-play-progress,
+.video-js .vjs-slider-bar {
+background: #fff;
+}
+.player {
+width: 100%    !important;
+height: auto   !important;
+border: 5px solid rgba(0,0,0,0.2);
+box-shadow: 0 0 20px rgba(0,0,0,0.2);
+
+
+}
+
+</style>
+
+
+
+<img  src="images/juiceradiologo.png" alt="" width="25%" > 
+
+<div class="container ">
+	
+<div class="row">
+		
+<div class="col-lg-8 col-md-8 col-sm-12">
+		<br>
+<div class="player" >
+<video style="box-shadow: -1px 5px 20px 0px rgba(35, 2, 37, 0.644);object-fit: fill; "  id="my_video_1" class="video-js vjs-default-skin vjs-16-9" 
+
+controls preload="none" width="100%" poster="https://raw.githubusercontent.com/EnockOMONDI/The-Juice-Radio/master/images/2.jpg"
+data-setup='{ data-setup="fluid": true, "playbackRates": [1, 1.5, 2] }'  >
+<source  src="https://raw.githubusercontent.com/EnockOMONDI/The-Juice-Radio/master/music/livecountdown.mp4" type='video/mp4' />
+<source src="https://youtu.be/HVRrXi-EJzw" type='video/webm' />
+</video>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-4 col-sm-12">
+		<br>
+<div class="card text-center" style="background-color: rgb(255, 255, 255);">
+<div class="card-header" style="background: linear-gradient(330deg, rgba(77,0,66,1) 0%, rgb(235, 130, 1) 100%);
+box-shadow: -1px 5px 20px 0px rgba(35, 2, 37, 0.644); color:#fff">
+<strong>Live Chat</strong> 
+</div>
+<div class="card-body justify-content-center " >
+<h3 style="color:rgb(77, 77, 77)">We are Offline</h3>
+<h5 style="color:rgb(77, 77, 77)" class="card-title"><strong>Notify me when Online?</strong> </h5>
+
+
+<!-- <form>
+<div class="form-group">
+<label style="color:rgb(35, 2, 37);" for="formGroupExampleInput"> <strong>Name</strong> </label>
+<input style="background-color:rgba(103, 11, 131, 0.068);margin-left: 20%; width:60%;" type="text"  class="form-control" id="formGroupExampleInput" >
+</div>
+<div class="form-group">
+	<label style="color:rgb(35, 2, 37);" for="formGroupExampleInput"> <strong>Phone Number</strong> </label>
+	<input style="background-color:rgba(103, 11, 131, 0.068);margin-left: 20%; width:60%;" type="text"  class="form-control" id="formGroupExampleInput" >
+</div>
+</form> -->
+<button type="submit" class="btn btn-primary" style="border-radius:30px">Notify me <span class="icon mdi mdi-bell-ring"></span> </button> 
+</div>
+
+</div>
+<br>
+<!-- <a  href="listen.html"><button  class="btn btn-primary skill" style="border-radius:30px; background-color: rgb(14, 1, 15);"><span class="icon mdi mdi-music-circle"></span> Listen Live? </button> </a> -->
+<a  href="index.html"> <button class="btn btn-primary " style="border-radius:30px;box-shadow: -1px 5px 20px 0px rgba(35, 2, 37, 0.44); background-color: rgb(0, 0, 0);"  ><span class="icon mdi mdi-chevron-left"></span> Back home </button> </a>
+
+
+</div>
+
+</div>
+</div>
+
+
+
+
+
+<script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+</body>
+
+<script>
+$(function(){
+var $refreshButton = $('#refresh');
+var $results = $('#css_result');
+
+function refresh(){
+var css = $('style.cp-pen-styles').text();
+$results.html(css);
+}
+
+refresh();
+$refreshButton.click(refresh);
+
+// Select all the contents when clicked
+$results.click(function(){
+$(this).select();
+});
+});
+
+</script>
+
+</html>

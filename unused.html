@@ -1,0 +1,232 @@
+<div class="swiper-container swiper-slider swiper-slider-1" data-loop="true" data-slide-effect="fade"  data-simulate-touch="false">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-slide-bg="images/2.jpg" data-pagination-text="01">
+          
+          </div>
+       
+         <div class="swiper-slide" data-slide-bg="images/24.jpg" data-pagination-text="03">
+           
+          </div> 
+            <div class="swiper-slide" data-slide-bg="images/3.jpg" data-pagination-text="03">
+          
+          </div> 
+         
+        </div>
+        
+    
+      
+      </div>
+
+
+      <!-- ------------------ -->
+      <section >
+            <div class="jumbotron-1-aside">
+              <div class="jumbotron-1-group">
+                <div class="jumbotron-1-group-item focus-toggle-parent wow fadeIn"><a class="jumbotron-1-group-item-toggle" href="https://www.youtube.com/channel/UCh0g7lP1rqMXLSaoEan3FEQ/" target="_blank"><span class=" icon mdi mdi-youtube-tv">
+                  </span></a>
+                  <div class="jumbotron-1-group-item-content"> <a href="https://www.youtube.com/channel/UCh0g7lP1rqMXLSaoEan3FEQ/" target="_blank" > The JUICE TV</a></div>
+                </div>
+                <div class="jumbotron-1-group-item focus-toggle-parent"><a class="jumbotron-1-group-item-toggle" href="https://www.instagram.com/juiceradiokenya/" target="_blank"><span class="icon mdi mdi-instagram"></span></a>
+                  <div class="jumbotron-1-group-item-content"><a href="https://www.instagram.com/juiceradiokenya/" target="_blank">Instagram</a></div>
+                </div>
+             
+                <div class="jumbotron-1-group-item focus-toggle-parent"><a class="jumbotron-1-group-item-toggle" href="https://www.facebook.com/juiceradioke" target="_blank"><span class="icon mdi mdi-facebook"></span></a>
+                  <div class="jumbotron-1-group-item-content"><a href="https://www.facebook.com/juiceradioke" target="_blank" >Facebook</a></div>
+                </div>
+              </div>
+            </div>
+            </section>
+
+
+          <div id="player">
+                <div id="player-track">
+                    <div id="album-name">  </div>
+                    <div id="track-name"></div>
+                
+                    <div id="track-time">
+                        <div id="current-time"></div>
+                        <div id="track-length"></div>
+                    </div>
+                    
+                    <div id="s-area">
+                        <div id="ins-time"></div>
+                        <div id="s-hover"></div>
+                        <div id="seek-bar"></div>
+                    </div>
+                    <div id="player-controls">
+                      <div class="control">
+                          <div class="button2" id="play-previous">
+                            
+                              <i class="fas fa-angle-left"></i>
+                          </div>
+                         
+                      </div>
+                      <div class="control">
+                          <div class="button2" id="play-pause-button">
+                              <i class="icon mdi mdi-play text-primary"></i>
+  
+                          </div>
+                      </div>
+                      <div class="control">
+                          <div class="button2" id="play-next">
+                              <i class="fas fa-angle-right"></i>
+                          </div>
+                      </div>
+                  </div>
+  
+                </div>
+                <div id="player-content">
+                    <div id="album-art">
+                        <img src="https://raw.githubusercontent.com/EnockOMONDI/The-Juice-Radio/master/images/_2.png" class="active" id="_1">
+                        
+                        <img src="https://raw.githubusercontent.com/EnockOMONDI/The-Juice-Radio/master/images/_2.png" id="_2">
+                        <img src="https://raw.githubusercontent.com/EnockOMONDI/The-Juice-Radio/master/images/_2.png" id="_3">
+                        <img src="https://raw.githubusercontent.com/EnockOMONDI/The-Juice-Radio/master/images/_2.png" id="_4">
+                        <img src="https://raw.githubusercontent.com/EnockOMONDI/The-Juice-Radio/master/images/_2.png" id="_5">
+                        <img src="https://raw.githubusercontent.com/EnockOMONDI/The-Juice-Radio/master/images/_2.png" id="_6">
+                        <div id="buffer-box">Fetching Stream ...</div>
+                    </div>
+                 
+                </div>
+           
+              </div>
+     
+
+
+
+<!--  style -->
+
+<!-- carousel -->
+<style>
+        /*
+            code by Iatek LLC 2018 - CC 2.0 License - Attribution required
+            code customized by Azmind.com
+        */
+        @media (min-width: 768px) and (max-width: 991px) {
+            /* Show 4th slide on md if col-md-4*/
+            .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+                position: absolute;
+                top: 0;
+                right: -33.3333%;  /*change this with javascript in the future*/
+                z-index: -1;
+                display: block;
+                visibility: visible;
+            }
+        }
+        @media (min-width: 576px) and (max-width: 768px) {
+            /* Show 3rd slide on sm if col-sm-6*/
+            .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+                position: absolute;
+                top: 0;
+                right: -50%;  /*change this with javascript in the future*/
+                z-index: -1;
+                display: block;
+                visibility: visible;
+            }
+        }
+        @media (min-width: 576px) {
+            .carousel-item {
+                margin-right: 0;
+            }
+            /* show 2 items */
+            .carousel-inner .active + .carousel-item {
+                display: block;
+            }
+            .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+            .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+                transition: none;
+            }
+            .carousel-inner .carousel-item-next {
+                position: relative;
+                transform: translate3d(0, 0, 0);
+            }
+            /* left or forward direction */
+            .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+            .carousel-item-next.carousel-item-left + .carousel-item,
+            .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+                position: relative;
+                transform: translate3d(-100%, 0, 0);
+                visibility: visible;
+            }
+            /* farthest right hidden item must be also positioned for animations */
+            .carousel-inner .carousel-item-prev.carousel-item-right {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                display: block;
+                visibility: visible;
+            }
+            /* right or prev direction */
+            .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+            .carousel-item-prev.carousel-item-right + .carousel-item,
+            .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+                position: relative;
+                transform: translate3d(100%, 0, 0);
+                visibility: visible;
+                display: block;
+                visibility: visible;
+            }
+        }
+        /* MD */
+        @media (min-width: 768px) {
+            /* show 3rd of 3 item slide */
+            .carousel-inner .active + .carousel-item + .carousel-item {
+                display: block;
+            }
+            .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+                transition: none;
+            }
+            .carousel-inner .carousel-item-next {
+                position: relative;
+                transform: translate3d(0, 0, 0);
+            }
+            /* left or forward direction */
+            .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+                position: relative;
+                transform: translate3d(-100%, 0, 0);
+                visibility: visible;
+            }
+            /* right or prev direction */
+            .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+                position: relative;
+                transform: translate3d(100%, 0, 0);
+                visibility: visible;
+                display: block;
+                visibility: visible;
+            }
+        }
+        /* LG */
+        @media (min-width: 991px) {
+            /* show 4th item */
+            .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+                display: block;
+            }
+            .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+                transition: none;
+            }
+            /* Show 5th slide on lg if col-lg-2 */
+            .carousel-inner .active.col-lg-2.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+                position: absolute;
+                top: 0;
+                right: -25%;  /*change this with javascript in the future*/
+                z-index: -1;
+                display: block;
+                visibility: visible;
+            }
+            /* left or forward direction */
+            .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+                position: relative;
+                transform: translate3d(-100%, 0, 0);
+                visibility: visible;
+            }
+            /* right or prev direction //t - previous slide direction last item animation fix */
+            .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+                position: relative;
+                transform: translate3d(100%, 0, 0);
+                visibility: visible;
+                display: block;
+                visibility: visible;
+            }
+        }
+        </style>

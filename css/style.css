@@ -10058,8 +10058,8 @@ html:not(.lt-ie10) .not-animated {
 	justify-content: center;
 	align-items: center;
 	padding: 20px;
-	background:linear-gradient(330deg, rgba(235, 130, 1, 0.938) 0%,  rgba(77,0,66,1) 100%);
-	transition: .4s all linear;
+	background:rgb(48, 1, 41);
+	transition: .1s all linear;
 }
 
 .preloader.loaded {
@@ -10100,7 +10100,7 @@ html:not(.lt-ie10) .not-animated {
 	height: 0;
 	width: 75%;
 	padding-bottom: 25%;
-	animation: preloader 3s linear infinite;
+	animation: preloader 2s linear infinite;
 }
 
 @keyframes preloader {

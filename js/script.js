@@ -111,7 +111,7 @@
         onTransitionStart: function (options) {
           setTimeout(function () {
             plugins.preloader.removeClass('loaded');
-          }, options.duration * .35);
+          }, options.duration * 0.5);
         },
         onReady: function () {
           plugins.preloader.addClass('loaded');

@@ -150,17 +150,20 @@ box-shadow: 0 0 20px rgba(0,0,0,0.2);
 		
 <div class="col-lg-8 col-md-8 col-sm-12">
 		<br>
-<div class="player" >
-<video style="box-shadow: -1px 5px 20px 0px rgba(35, 2, 37, 0.644);object-fit: fill; "  id="my_video_1" class="video-js vjs-default-skin vjs-16-9" 
+		<div class="twitch">
+			<div class="twitch-video">
+			  <iframe
+				src="https://player.twitch.tv/?channel=juicewaveradio&parent=thejuiceradio.co.ke&autoplay=false"
+				frameborder="0"
+				scrolling="no"
+				allowfullscreen="true"
+				height="100%"
+				width="100%">
+			  </iframe>
+			</div>
+			
+		  </div>
 
-controls preload="none" width="100%" poster="https://raw.githubusercontent.com/EnockOMONDI/Juice-wave-radio/master/images/2.jpg"
-data-setup='{ data-setup="fluid": true, "playbackRates": [1, 1.5, 2] }'  >
-
-<!--  -->
-<source  src="https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1600411362/ei/ggJkX7_4J4TVxN8P_quc6AY/ip/105.163.31.53/id/ZX96zKkQJ4Q.1/source/yt_live_broadcast/requiressl/yes/hfr/1/maudio/1/vprv/1/go/1/keepalive/yes/dover/11/itag/0/playlist_type/LIVE/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Chfr%2Cmaudio%2Cvprv%2Cgo%2Citag%2Cplaylist_type/sig/AOq0QJ8wRQIgaXPaligRORzso6v-cHS8pGwloXQh68kryS5jFH9edMsCIQCKfDnIXIxHq9DgGdOb5ugUEVrH7TnSZzxTC2HmT-WPmg%3D%3D/file/index.m3u8" type='video/mp4' />
-<source src="https://raw.githubusercontent.com/EnockOMONDI/Juice-wave-radio/master/music/livecountdown.mp4" type='video/webm' />
-</video>
-</div>
 </div>
 
 <div class="col-lg-4 col-md-4 col-sm-12">
@@ -171,22 +174,15 @@ box-shadow: -1px 5px 20px 0px rgba(35, 2, 37, 0.644); color:#fff">
 <strong>Live Chat</strong> 
 </div>
 <div class="card-body justify-content-center " >
-	<!-- <iframe src="https://chat.restream.io/embed?token=619e366e-3d81-4fab-972b-e3e357d8eac0" frameborder="0"></iframe> -->
-<h3 style="color:rgb(77, 77, 77)">We are Offline</h3>
-<h5 style="color:rgb(77, 77, 77)" class="card-title"><strong>Notify me when Online?</strong> </h5>
-
-
-<!-- <form>
-<div class="form-group">
-<label style="color:rgb(35, 2, 37);" for="formGroupExampleInput"> <strong>Name</strong> </label>
-<input style="background-color:rgba(103, 11, 131, 0.068);margin-left: 20%; width:60%;" type="text"  class="form-control" id="formGroupExampleInput" >
-</div>
-<div class="form-group">
-	<label style="color:rgb(35, 2, 37);" for="formGroupExampleInput"> <strong>Phone Number</strong> </label>
-	<input style="background-color:rgba(103, 11, 131, 0.068);margin-left: 20%; width:60%;" type="text"  class="form-control" id="formGroupExampleInput" >
-</div>
-</form> -->
-<button type="submit" class="btn btn-primary" style="border-radius:30px">Notify me <span class="icon mdi mdi-bell-ring"></span> </button> 
+	<div class="twitch-chat">
+		<iframe
+		  frameborder="0"
+		  scrolling="no"
+		  src="https://www.twitch.tv/embed/juicewaveradio/chat?parent=thejuiceradio.co.ke"
+		  height="100%"
+		  width="100%">
+		</iframe>
+	  </div>
 </div>
 
 </div>
@@ -223,7 +219,48 @@ box-shadow: -1px 5px 20px 0px rgba(35, 2, 37, 0.644); color:#fff">
  </div>
   </section>
 
+  <style>
 
+	.twitch .twitch-video {
+	  padding-top: 56.25%;
+	  position: relative;
+	  height: 0;
+	}
+	
+	.twitch .twitch-video iframe {
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  top: 0;
+	}
+	.twitch .twitch-chat {
+	  height: 400px;
+	}
+	
+	.twitch .twitch-chat iframe {
+	  width: 100%;
+	  height: 100%;
+	}
+	@media screen and (min-width: 850px) {
+	  .twitch {
+		position: relative;
+	  }
+	  
+	  .twitch .twitch-video {
+		width: 75%;
+		padding-top: 42.1875%;
+	  }
+	
+	  .twitch .twitch-chat {
+		width: 25%;
+		height: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	  }
+	}
+	</style>
 <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
 </body>
 

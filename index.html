@@ -13,34 +13,6 @@
 </script>
 
 
-<!-- Start of Async Drift Code -->
-<script>
-"use strict";
-
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('d33z95y6tc33');
-</script>
-<!-- End of Async Drift Code -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,11 +29,28 @@ drift.load('d33z95y6tc33');
     <!-- <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style> -->
   <!-- <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css"> -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-  <!-- Start of Async Drift Code -->
 
-  <!-- End of Async Drift Code -->
   </head>
- 
+  <style>
+
+.whatsApp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    left:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index:100;
+}
+.my-whatsApp{
+    margin-top:16px;
+}
+	</style>
   <body style=" background-color: #f0f0f0">
 
     <!-- <div class="ie-panel"><a href="#"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, wednesday for free today."></a></div> -->
@@ -171,6 +160,9 @@ drift.load('d33z95y6tc33');
 
       <!-- FScreen-->
 
+
+	
+<a href="https://chat.whatsapp.com/GctJwfpwgotFBq0KcK2DGD" class="whatsApp" target="_blank"><i class="fa fa-whatsapp my-whatsApp"></i></a>
 
       <div id="carouselExampleControls" class="carousel slide "  data-ride="carousel" data-interval="2200"> 
           <div class="jumbotron-1-aside">

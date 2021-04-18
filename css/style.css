@@ -10047,7 +10047,7 @@ html:not(.lt-ie10) .not-animated {
 *
 * Preloader
 */
-.preloader {
+/* .preloader {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -10115,7 +10115,7 @@ html:not(.lt-ie10) .not-animated {
 		transform: translateY(0%) rotate(-360deg);
 		transition-timing-function: ease-in;
 	}
-}
+} */
 
 /*
 *
